@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+          margin: 0;
+          padding: 0;
+          font-family: 'Arial', sans-serif;
+        }
+      
+        .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+  padding: 20px;
+  background-color: #f0f0f0;
+  height: 60px; /* Fixed height */
+}
+
+
+
+ a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+
+
+
+
+
+      
+
+
+
+
+        .content {
+          display: flex;
+          flex-direction: column;
+      
+          
+          height: 90vh;
+        }
+      
+        .content h1 {
+          font-size: 8em;
+          text-transform: lowercase;
+          animation: fadeIn 2s ease-in-out infinite alternate;
+          text-align: left;
+          margin-left: 10%;
+        }
+      
+        .content h2 {
+          font-size: 4em;
+          text-transform: uppercase;
+          margin-top: -10px;
+          margin-left: 10%;
+        }
+      
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+
+        /* banner */
+
+  .banner {
+    position: relative;
+    color: white;
+    background-image: url(vector\ 3.gif);
+    background-size: cover;
+    background-position: center;
+    height: 600px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -50px;
+  }
+  
+  
+   .content2{
+     margin-top: 100px;
+     position:relative;
+     z-index: 2;
+     font-size: large;
+   }
+
+   .content2 h1 {
+      margin: 10px;
+      font-size: 3em;
+   }
+
+   .content2 p {
+      margin: 10px;
+      font-size: 1em;
+      color: #ef7700;
+   }
+
+ 
+
+
+   .navbar2 {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+ height: 250px;
+  width: 100%;
+  margin-top: 55px;
+}
+
+.nav-item {
+  text-align: center;
+  color: #000000;
+  margin-right: 25px;
+  flex: 1; /* Each nav-item will grow equally */
+  min-width: 150px; /* Minimum width before wrapping */
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-title {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.nav-text {
+  font-size: 15px;
+
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-title {
+    font-size: 20px; /* Smaller font size on smaller screens */
+  }
+
+  .nav-text {
+    font-size: 12px; /* Smaller font size on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar2 {
+    padding: 10px; /* Less padding on smaller screens */
+  }
+
+  .nav-item {
+    margin-right: 10px; /* Less margin on smaller screens */
+  }
+}
+
+
+.history-section {
+  height: 550px;
+  background-color: white;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  margin-top: 30px;
+  overflow: hidden; /* Prevents content from spilling out */
+ 
+}
+
+.history-section:hover {
+  transform: translateY(-20px);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+
+.know-more-btn {
+  background-color: transparent;
+  border: 2px solid #333;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.know-more-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+#hub {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ef7700;
+}
+
+p {
+  font-size: 16px;
+  color: #5d5858;
+  line-height: 1.6;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .header {
+    font-size: 40px; /* Smaller font size for tablets */
+  }
+  #hub {
+    font-size: 24px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .history-section {
+    padding: 20px;
+    height: auto; /* Adjust height for mobile devices */
+  }
+  .header {
+    font-size: 30px; /* Smaller font size for mobile */
+  }
+  #hub {
+    font-size: 20px;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column; /* Stack header items on small screens */
+    margin-bottom: 10px;
+  }
+  .know-more-btn {
+    padding: 6px 15px; /* Smaller button for small screens */
+  }
+}
+
+
+
+        .container {
+    display: flex;
+    width: 100%;
+    height: 400px; /* Adjust as needed */
+  }
+  .section {
+    flex: 1;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+  }
+  .speed {
+    background-image: url(speed.avif); /* Replace with your image path */
+  }
+  .quality {
+    background-image: url(qualityy.avif); /* Replace with your image path */
+  }
+  .comfort {
+    background-image: url(comfort.avif); /* Replace with your image path */
+  }
+  .section p {
+    font-size: 24px; /* Adjust as needed */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    color: black;
+  }
+
+
+
+
+
+  .footer {
+  width: 100%;
+  background-color: #f2f2f2;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  display: block;
+  height: 350px;
+}
+.foot{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+
+.footer-column h3 {
+    margin-top: 150px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  transition: color 0.3s ease; /* Smooth color transition */
+  text-transform:uppercase;
+}
+
+
+.footer-column ul {
+  list-style-type: none;
+  padding-left: 0;
+ 
+}
+
+.footer-column li {  
+  margin-bottom: 5px;
+  font-size: 14px;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.footer-column li:hover {
+  color: #333; /* Darken text on hover */
+}
+
+.social-icons {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-icons li {
+  margin-right: 10px;
+  transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.social-icons li:hover {
+  transform: scale(1.2); /* Enlarge icons on hover */
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s ease; /* Smooth opacity transition */
+}
+
+.social-icons img:hover {
+  opacity: 0.7; /* Slightly transparent on hover */
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .footer-column {
+    flex-basis: calc(50% - 20px); /* Adjust width for tablet devices */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    justify-content: center;
+  }
+  .footer-column {
+    flex-basis: calc(100% - 20px); /* Full width for mobile devices */
+    max-width: calc(100% - 20px);
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-column {
+    flex-basis: 100%; /* Stack columns vertically on small screens */
+  }
+}
+
+
+
+      </style>
+</head>
+<body>
+    
+<div class="navbar">
+    <a href="index.html.htm">HOME</a>
+    <a href="CONTACT.HTML">CONTACT</a>
+    <a href="shop.html">SHOP</a>
+   
+  </div>
+  
+  <div class="content">
+    <h1>know us more</h1>
+    <h2>About Us</h2>
+  </div>
+
+  
+<div class="banner">
+    <div class="overlay"></div>  
+    <div class="content2">  
+      <h1>Helping you keep fit</h1>
+      <p>Since 1978</p>
+    </div>
+   
+  </div>
+  
+  
+
+  
+<div class="navbar2">
+    <div class="nav-item">
+      <div class="nav-title"> Research</div>
+      <div class="nav-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+      <div class="nav-text">lectus nec ullam corper</div>
+    </div>
+    <div class="nav-item">
+        <div class="nav-title">idea & concept</div>
+        <div class="nav-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+        <div class="nav-text">lectus nec ullam corper</div>
+      </div>
+      <div class="nav-item">
+        <div class="nav-title">design & production</div>
+        <div class="nav-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+        <div class="nav-text">lectus nec ullam corper</div>
+      </div>
+      <div class="nav-item">
+        <div class="nav-title">sale and service</div>
+        <div class="nav-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+        <div class="nav-text">lectus nec ullam corper</div>
+      </div>
+    <!-- Repeat .nav-item for each section -->
+  </div>
+
+
+  <div class="history-section">
+    <div class="header">
+        <h2>History</h2>
+     
+    </div>
+    <h1 id="hub">Sed non mauris vitae erat consequat</h1>
+    <p>There are many variations of Lorem Ipsum available, but the majority have suffered alteration in some form...
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere corporis soluta id eaque quis laboriosam libero dicta possimus. Repudiandae sit optio minus? Nulla delectus quasi asperiores molestiae optio, nostrum minima.
+        Voluptates vero vitae, dolor, asperiores et consectetur nisi beatae libero itaque tempore excepturi magni deleniti eos, iusto dolorem aspernatur! Cumque, expedita. Id inventore doloremque architecto soluta eum temporibus autem libero?
+        In aliquid distinctio maxime, nulla voluptatum quas officiis iste, voluptate harum, sed sapiente consequatur enim at quasi! Dolorum molestiae, voluptate quibusdam reiciendis eveniet explicabo facilis placeat cumque, error quasi doloribus?
+    </p>
+    <button class="know-more-btn">KNOW MORE</button>
+</div>
+
+  
+<div class="container">
+   
+    <div class="section quality">
+      <p>QUALITY</p>
+    </div>
+    <div class="section speed">
+        <p>SPEED</p>
+      </div>
+    <div class="section comfort">
+      <p>COMFORT</p>
+    </div>
+  </div>
+
+
+
+  
+<footer class="footer">
+    <div class="foot">
+    <div class="footer-column">
+      <h3>Categories</h3>
+      <ul>
+        <li>Running Shoes</li>
+        <li>Yoga Shoes</li>
+        <li>Sports Shoes</li>
+        <li>Casual Shoes</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Business</h3>
+      <ul>
+        <li>Company Profile</li>
+        <li>Social Responsibility</li>
+        <li>Brand Kit</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>About</h3>
+      <ul>
+        <li>Board of Directors</li>
+        <li>Company Profile</li>
+        <li>Careers</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Useful Links</h3>
+      <ul>
+        <li>Return Policies</li>
+        <li>Announcements</li>
+        <li>Have issues?</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <!-- Add social media icons here -->
+      <ul class="social-icons">
+        <li><a href="fb.avif"><img src="facebook.jpg" alt="Facebook"></a></li>
+        <li><a href="your-twitter-url"><img src="twitter.jpg" alt="Twitter"></a></li>
+        <li><a href="your-instagram-url"><img src="instagram.jpg" alt="Instagram"></a></li>
+        <!-- Add more social media icons as needed -->
+      </ul>
+    </div>
+</div>
+</footer>
+
+
+
+
+<script>
+    document.getElementById('customizeBtn').addEventListener('click', function() {
+      // Add customization code here
+    });
+    // JavaScript for enhanced interactivity and visual effects
+
+// Add CSS classes for animations in your stylesheet
+
+  </script>
+
+</body>
+</html>

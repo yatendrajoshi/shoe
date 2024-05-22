@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+<style>
+    body{
+        margin: 0px;
+        font-family: 'Arial', sans-serif;
+    }
+               .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+  padding: 20px;
+  background-color: #f0f0f0;
+  height: 60px; /* Fixed height */
+}
+
+
+
+ a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          height: 90vh;
+        }
+      
+        .content h1 {
+          font-size: 8em;
+          text-transform: lowercase;
+          animation: fadeIn 2s ease-in-out infinite alternate;
+          text-align: left;
+          margin-left: 10%;
+        }
+      
+        .content h2 {
+          font-size: 4em;
+          text-transform: uppercase;
+          margin-top: -10px;
+          margin-left: 10%;
+        }
+      
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+ .features {
+  height: 200px;
+  border-top: 5px solid white;
+  display: flex;
+  justify-content: space-around;
+  background-color:#ffffff;
+  align-items: center;
+  
+}
+.feature-item {
+  text-align: center;
+  flex-basis: calc(25% - 20px);
+ 
+}
+.feature-item i {
+  font-size: 48px;
+  display: block;
+  margin: auto;
+}
+.feature-item p {
+  color: black;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.feature-item small {
+  color: #666;
+}
+@media (max-width: 600px) {
+  .feature-item {
+    flex-basis: calc(100% - 20px);
+  }
+}
+@media (max-width: 480px) {
+  .feature-item {
+    flex-basis: 100%;
+  }
+}
+
+
+
+
+
+.footer {
+  width: 100%;
+  background-color: #f2f2f2;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  display: block;
+  height: 350px;
+}
+.foot{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+
+.footer-column h3 {
+    margin-top: 150px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  transition: color 0.3s ease; /* Smooth color transition */
+  text-transform:uppercase;
+}
+
+
+.footer-column ul {
+  list-style-type: none;
+  padding-left: 0;
+ 
+}
+
+.footer-column li {  
+  margin-bottom: 5px;
+  font-size: 14px;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.footer-column li:hover {
+  color: #333; /* Darken text on hover */
+}
+
+.social-icons {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-icons li {
+  margin-right: 10px;
+  transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.social-icons li:hover {
+  transform: scale(1.2); /* Enlarge icons on hover */
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s ease; /* Smooth opacity transition */
+}
+
+.social-icons img:hover {
+  opacity: 0.7; /* Slightly transparent on hover */
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .footer-column {
+    flex-basis: calc(50% - 20px); /* Adjust width for tablet devices */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    justify-content: center;
+  }
+  .footer-column {
+    flex-basis: calc(100% - 20px); /* Full width for mobile devices */
+    max-width: calc(100% - 20px);
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-column {
+    flex-basis: 100%; /* Stack columns vertically on small screens */
+  }
+}
+
+
+
+
+/* styles.css */
+
+/* Style the slider container */
+.slider-container {
+    position: relative;
+    width: 100%;
+   
+ /* Adjust as needed */
+    margin: auto;
+}
+
+/* Style the image slider */
+.slider {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider img {
+   
+    width: 100%;
+}
+
+/* Style the round indicators (dots) */
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb; /* Adjust color as needed */
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Add active style for the current slide */
+.active {
+    background-color: #020202; /* Adjust active color */
+}
+
+
+.map iframe {
+  width: 100%;
+  height: 300px; /* Adjust as needed */
+  
+}
+.contact-info {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Additional styling for contact info text */
+.contact-info h2 {
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #666;
+}
+/* styles.css */
+
+.mon{
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            margin: 0;
+}
+.subscription-div {
+            text-align: center; /* Centers the text */
+            background-color: #ffffff; /* Scale the image to cover the entire div */
+            width: 100%; /* Set your desired width */
+            /* Set your desired height */
+            padding: 20px; /* Add some padding for spacing */
+        }
+
+        .subscription-div h2 {
+            font-size: 55px;
+            margin-bottom: 25px; /* Spacing between heading and paragraph */
+        }
+
+        .subscription-div p {
+            color: #000000; /* Lighter grey for paragraph */
+            margin-bottom: 20px; /* Spacing between paragraph and input field */
+        }
+
+        .subscription-div input[type="email"] {
+            padding: 15px;
+            border: 2px solid black;
+            border-radius: 25px;
+            width: 240px;
+            margin-right: -4px;
+        }
+
+        .subscription-div button {
+          
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            background-color: #403E4A; /* Darker shade for button */
+            color: white;
+           
+        }
+
+
+</style>
+</head>
+<body>
+       
+<div class="navbar">
+    <a href="index.html.htm">HOME</a>
+    <a href="about.html">ABOUT US</a>
+    <a href="shop.html">SHOP</a>
+   
+  </div>
+   
+  <div class="content">
+    <h1>GET IN TOUCH</h1>
+    <h2>CONTACT</h2>
+  </div>
+ 
+
+  <div class="slider-container">
+    <div class="slider">
+        <img src="puma.webp" alt="Image 1">
+        <img src="adidas.jpg" alt="Image 2">
+        <img src="nike.jpg" alt="Image 3">
+        <img src="gucci.jpg" alt="Image 3">
+    </div>
+    <div class="slider-controls">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>
+
+ 
+
+
+
+
+<div class="mon">
+
+  <div class="subscription-div">
+    <h2>Get promotions & updates!</h2>
+    <p>Seamlessly empower fully researched growth strategies and interoperable internal or 'organic' sources credibly innovate granular internal...</p>
+    <input type="email" placeholder="Enter your mail">
+    <button>Subscribe</button>
+</div>
+</div>
+  
+
+
+<div class="features">
+  <div class="feature-item">
+    <i class="material-icons">local_shipping</i>
+    <p>Free Delivery</p>
+    <small> 951808363</small>
+  </div>
+  <div class="feature-item">
+    <i class="material-icons">replay</i>
+    <p>Return Policy</p>
+    <small> 951808363</small>
+  </div>
+  <div class="feature-item">
+    <i class="material-icons">support_agent</i>
+    <p>24/7 Support</p>
+    <small> 951808363</small>
+  </div>
+  <div class="feature-item">
+    <i class="material-icons">lock</i>
+    <p>Secure Payment</p>
+    <small> 951808363</small>
+  </div>
+</div>
+
+<div class="map">
+    <!-- Embed Google Map iframe here -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14162.136770165933!2d77.46153708152728!3d27.452624053179324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39730955785a3589%3A0x67dfcaf4147a86ce!2sChaturbhuja%20Narayana%20Temple%20Paintha%20Village!5e0!3m2!1sen!2sin!4v1716214893132!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+  
+<footer class="footer">
+  <div class="foot">
+  <div class="footer-column">
+    <h3>Categories</h3>
+    <ul>
+      <li>Running Shoes</li>
+      <li>Yoga Shoes</li>
+      <li>Sports Shoes</li>
+      <li>Casual Shoes</li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h3>Business</h3>
+    <ul>
+      <li>Company Profile</li>
+      <li>Social Responsibility</li>
+      <li>Brand Kit</li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h3>About</h3>
+    <ul>
+      <li>Board of Directors</li>
+      <li>Company Profile</li>
+      <li>Careers</li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h3>Useful Links</h3>
+    <ul>
+      <li>Return Policies</li>
+      <li>Announcements</li>
+      <li>Have issues?</li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h3>Follow Us</h3>
+    <!-- Add social media icons here -->
+    <ul class="social-icons">
+      <li><a href="fb.avif"><img src="facebook.jpg" alt="Facebook"></a></li>
+      <li><a href="your-twitter-url"><img src="twitter.jpg" alt="Twitter"></a></li>
+      <li><a href="your-instagram-url"><img src="instagram.jpg" alt="Instagram"></a></li>
+      <!-- Add more social media icons as needed -->
+    </ul>
+  </div>
+</div>
+</footer>
+
+
+
+<script>
+    // script.js
+
+const slides = document.querySelectorAll('.slider img');
+const dots = document.querySelectorAll('.dot');
+
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach((slide) => {
+        slide.style.display = 'none';
+    });
+    slides[index].style.display = 'block';
+
+    dots.forEach((dot) => {
+        dot.classList.remove('active');
+    });
+    dots[index].classList.add('active');
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        showSlide(index);
+        currentSlide = index;
+    });
+});
+
+// Automatically advance to the next slide every 3 seconds
+setInterval(nextSlide, 1000);
+
+</script>
+</body>
+</html>

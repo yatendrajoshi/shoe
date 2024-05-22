@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    font-family: Poppins;
+  }
+        .kids-collection{
+            height: 250px;
+            width: 100%;
+            background-image: url("kids\ back.webp");
+            background-size: cover;
+            background-position: center;
+           
+        }
+                .shorting{
+            display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        h1{
+            font-size:40px;
+        }
+        .sort-section {
+    text-align: center;
+    margin: 40px 0;
+  }
+  .sort-label {
+    
+    font-weight: bold;
+    font-size: 25px;
+    color: #333;
+  }
+  .sort-select {
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    color: #555;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .sort-select:hover,
+  .sort-select:focus {
+    border-color: #E44D26;
+    box-shadow: 0 0 8px rgba(228,77,38,0.2);
+  }
+  .sort-select option {
+    padding: 10px;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .product-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .product-item p{
+    margin: 25px;
+  }
+  .buttons {
+    display: none;
+    position: absolute;
+    bottom: 5px; /* Adjust as per your design */
+    text-align: center;
+    width: 92%;
+  }
+  .product-item:hover .buttons {
+    display: block;
+  }
+  .button {
+    display: block;
+    width: 100%;
+    background-color: #000000;
+    text-decoration: none;
+    font-size:medium;
+    transition: background-color 0.3s ease;
+  }
+  .button:hover {
+    background-image: linear-gradient(180deg,lightblue,pink);
+    color: black;
+  }
+  .products-grid a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  .product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  #first.product-image img:hover{
+    transform: scale(1.05);
+    content: url("shop\ s1.webp");
+  }
+  #second.product-image img:hover {
+    transform: scale(1.05);
+    content: url("shop\ s4.webp");
+  }
+  #third.product-image img:hover {
+    transform: scale(1.05);
+    content: url("shop\ s8.webp");
+  }
+  #fourth.product-image img:hover {
+    transform: scale(1.05);
+    content: url("4\ 2.webp");
+  }
+  #fifth.product-image img:hover {
+    transform: scale(1.05);
+    content: url("fifth\ 2.webp");
+  }
+  #sixth.product-image img:hover {
+    transform: scale(1.05);
+    content: url("sixth.webp");
+  }
+  #seventh.product-image img:hover {
+    transform: scale(1.05);
+    content: url("seven\ 2.webp");
+  }
+  #eighth.product-image img:hover {
+    transform: scale(1.05);
+    content: url("eighth\ 2.webp");
+  }
+  #ninth.product-image img:hover {
+    transform: scale(1.05);
+    content: url("nine\ 2.webp");
+  }
+  #tenth.product-image img:hover {
+    transform: scale(1.05);
+    content: url("ten\ 2.png");
+  }
+  #eleventh.product-image img:hover {
+    transform: scale(1.05);
+    content: url("ele\ 2.webp");
+  }
+  @media (max-width: 768px) {
+    .products-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+  @media (max-width: 768px) {
+   .container {
+      align-items: center;
+    }
+  }/* Responsive styles for mobile phones */
+  @media (max-width: 480px) {
+    .container{
+      width: 100%;
+     align-items: center;
+    }
+  
+  }
+
+  
+  .footer {
+    padding: 40px 0;
+   background-color: #000000;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: relative;
+  }
+ 
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .footer-section {
+    flex: 1;
+    min-width: 150px;
+  }
+  .footer-section h3 ,p{
+    margin-bottom: 20px;
+    color: white;
+  }
+  .footer-section a,
+  .footer-section button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    background: #fff;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  .footer-section a:hover,
+  .footer-section button:hover {
+    transform: translateY(-5px);
+    background: #C748B9;
+  }
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #a11313;
+    transition: color 0.3s ease;
+  }
+  .social-icons a:hover {
+    color: #C748B9;
+  }
+  .product-item p{
+    color: #000000;
+  }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="kids-collection">
+            
+        </div>
+    </header>
+
+<div class="shorting">
+    <h1>KIDS</h1>
+    <div class="sort-section">
+        <label for="sortby" class="sort-label">Sort by:</label>
+        <select id="sortby" class="sort-select">
+          <option value="recommend">Recommended</option>
+          <option value="price-low-high">Price: Low to High</option>
+          <option value="price-high-low">Price: High to Low</option>
+          <option value="newest">Newest Arrivals</option>
+        </select>
+      </div>
+        
+</div>
+        
+
+        
+<div class="products-grid">
+  <!-- Repeat this block for each product -->
+  <div class="product-item">
+    <div class="product-image" id="first">
+      <img src="shop s2.webp" alt="Product Name">
+    </div>
+    <h3>SNEAKERS</h3>
+    <p>$50</p>
+    <div class="buttons">
+      <a href="addtocart.html" target="main" class="button">Add to Cart</a>
+    </div>
+  </div>
+  <div class="product-item">
+    <div class="product-image" id="second">
+      <img src="shop s3.webp" alt="Product Name">
+    </div>
+    <h3>SNEAKERS</h3>
+    <p>$50</p>
+    <div class="buttons">
+      <a href="addtocart.html" class="button">Add to Cart</a>
+    </div>
+  </div>
+  <div class="product-item">
+    <div class="product-image" id="third">
+      <img src="shop s7.webp" alt="Product Name">
+    </div>
+    <h3>SNEAKERS</h3>
+    <p>$50</p>
+    <div class="buttons">
+      <a href="add-to-cart-link.html" class="button">Add to Cart</a>
+    </div>
+  </div>
+  <div class="product-item">
+    <div class="product-image" id="fourth">
+      <img src="4 1.webp" alt="Product Name">
+    </div>
+    <h3>SNEAKERS</h3>
+    <p>$50</p>
+    <div class="buttons">
+      <a href="addtocart.html" class="button">Add to Cart</a>
+    </div>
+  </div>
+  <div class="product-item">
+    <div class="product-image" id="fifth">
+      <img src="fifth 1.webp" alt="Product Name">
+    </div>
+    <h3>SNEAKERS</h3>
+    <p>$50</p>
+    <div class="buttons">
+      <a href="add-to-cart-link.html" class="button">Add to Cart</a>
+    </div>
+  </div>
+  <div class="product-item">
+    <div class="product-image" id="sixth">
+      <img src="sixth 1.webp" alt="Product Name">
+    </div>
+    <h3>SNEAKERS</h3>
+    <p>$50</p>
+    <div class="buttons">
+      <a href="addtocart.html" class="button">Add to Cart</a>
+    </div>
+  </div>
+  <div class="product-item">
+    <div class="product-image" id="seventh">
+      <img src="seventh 1.webp" alt="Product Name">
+    </div>
+    <h3>SNEAKERS</h3>
+    <p>$50</p>
+    <div class="buttons">
+      <a href="addtocart.html" class="button">Add to Cart</a>
+    </div>
+  </div>
+  <div class="product-item">
+    <div class="product-image" id="eighth">
+      <img src="eighth 1.webp" alt="Product Name">
+    </div>
+    <h3>SNEAKERS</h3>
+    <p>$50</p>
+    <div class="buttons">
+      <a href="add-to-cart-link.html" class="button">Add to Cart</a>
+    </div>
+  </div>
+  <div class="product-item">
+    <div class="product-image" id="ninth">
+      <img src="nine 1.webp" alt="Product Name">
+    </div>
+    <h3>SNEAKERS</h3>
+    <p>$50</p>
+    <div class="buttons">
+      <a href="addtocart.html" class="button">Add to Cart</a>
+    </div>
+  </div>
+  <div class="product-item">
+    <div class="product-image" id="tenth">
+      <img src="ten 1.png" alt="Product Name">
+    </div>
+    <h3>SNEAKERS</h3>
+    <p>$50</p>
+    <div class="buttons">
+      <a href="addtocart.html" class="button">Add to Cart</a>
+    </div>
+  </div>
+  <div class="product-item">
+    <div class="product-image" id="eleventh">
+      <img src="ele 1.webp" alt="Product Name">
+    </div>
+    <h3>SNEAKERS</h3>
+    <p>$50</p>
+    <div class="buttons">
+      <a href="addtocart.html" class="button">Add to Cart</a>
+    </div>
+  </div>
+  <!-- End of product block -->
+</div>
+
+
+
+  
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Discover our story and meet the team!</p>
+        <button>Learn More</button>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
